@@ -7,6 +7,9 @@ node{
       // def mvnHome =  tool name: 'maven-3', type: 'maven'   
       sh "mvn package"
    }
+   stage('Print a Message'){
+      sh "echo Build Completed"
+   }
    /*stage('Email Notification'){
       mail bcc: '', body: '''Hi Welcome to jenkins email alerts
       Thanks
