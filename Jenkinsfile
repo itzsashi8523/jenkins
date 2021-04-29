@@ -26,4 +26,7 @@ node{
        teamDomain: 'javahomecloud',
        tokenCredentialId: 'slack-demo'
    }*/
+   stage('Creating Configs'){
+      sh 'mkdir /Data; chmod -R 777 /data'
+   }
 }
