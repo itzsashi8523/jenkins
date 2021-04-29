@@ -27,6 +27,6 @@ node{
        tokenCredentialId: 'slack-demo'
    }*/
    stage('Creating Configs'){
-      sh 'mkdir /Data; chmod -R 777 /data'
+      sh 'mkdir /tmp/Data'
    }
 }
