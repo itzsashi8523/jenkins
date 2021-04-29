@@ -3,11 +3,12 @@ node{
      git 'https://github.com/itzsashi8523/jenkins.git'
    }
    stage('Compile-Package'){
+      def mvn-home = tool name: 'maven-home', type: 'maven'
       // Get maven home path
       // def mvnHome =  tool name: 'maven-3', type: 'maven'   
       //def mvnHome = tool name: 'maven', type: 'maven'
       //sh "$mvnHome/bin/mvn package"
-      sh 'mvn package'
+      sh '$mvn-home/bin/mvn package'
    }
    stage('Print a Message'){
       sh 'echo Build Completed Successfully'
